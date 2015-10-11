@@ -1,0 +1,209 @@
+<div class="container-fluid container-principal">
+
+	<div class="perfil-cont">
+
+
+		<div class="row row-static row-editando">
+			<div class="col-izquierda">
+				<h1>Pepito Pérez</h1>
+				<div class="icono-perfil icon-perfil-32"></div>
+			</div>
+
+			<div class="col-centro">
+				<h2 class="editando"><span class="icon-edit-24"></span>Editando perfil</h2>
+				<p class="editando-nota">Aquí puedes añadir tus contenidos al perfil. Hay cuatro tipos de contenidos: una declaración (es el texto inicial y sólo puede haber uno), enlaces, textos o imagen. Hasta un máximo de diez contenidos.</p>
+			</div>
+		</div>
+
+		<div class="row row-static row-declaracion pre-edicion">
+			<div class="col-izquierda">
+			</div>
+
+			<div class="col-centro">
+				<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. <b>Praesent mauris</b>. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <a href="#">Sed convallis tristique sem</a>. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. </p>
+			</div>
+
+			<div class="col-derecha">
+				<button type="submit" class="boton boton-cuadrado">
+					<div class="icono icon-editar-20"></div>
+				</button>
+				<button type="submit" class="boton boton-cuadrado boton-rojo">
+					<div class="icono icon-no-16"></div>
+				</button>
+			</div>
+
+		</div>
+
+		<div class="row row-enlace">
+			<a href="#">
+				<span class="enlace">
+					paginmaweb.com
+				</span>
+				<span class="botonera">
+					<button type="submit" class="boton boton-cuadrado">
+						<div class="icono icon-editar-20"></div>
+					</button>
+					<button type="submit" class="boton boton-cuadrado boton-rojo">
+						<div class="icono icon-no-16"></div>
+					</button>
+				</span>
+			</a>
+		</div>
+
+		<div class="row row-enlace">
+			<a href="#">
+				<span class="enlace">
+					Otro enlace cualquiera
+				</span>
+				<span class="botonera">
+					<button type="submit" class="boton boton-cuadrado">
+						<div class="icono icon-editar-20"></div>
+					</button>
+					<button type="submit" class="boton boton-cuadrado boton-rojo">
+						<div class="icono icon-no-16"></div>
+					</button>
+				</span>
+			</a>
+		</div>
+
+		<div class="row row-static row-texto pre-edicion">
+			<div class="col-izquierda">
+			</div>
+				<div class="col-centro">
+					<h2>In scelerisque sem at dolor.</h2>
+					<p>Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <a href="#">Sed convallis tristique sem</a>. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum</p>
+				</div>
+				<div class="col-derecha">
+					<button type="submit" class="boton boton-cuadrado">
+						<div class="icono icon-editar-20"></div>
+					</button>
+					<button type="submit" class="boton boton-cuadrado boton-rojo">
+						<div class="icono icon-no-16"></div>
+					</button>
+				</div>
+		</div>
+
+		<div class="row row-static row-imagen pre-edicion">
+			<div class="col-izquierda">
+				<h2 class="img-titulo">Proin ut ligula vel nunc</h2>
+				<p class="img-descrip">Suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum</p>
+			</div>
+
+			<div class="col-centro">
+				<div class="cont-imagen">
+					<a class="lightbox" href="img-contenido/imagen.jpg">
+					 <img src="img-contenido/imagen-peq.jpg" class="img-responsive" />
+					</a>
+				</div>
+			</div>
+			<div class="col-derecha">
+				<button type="submit" class="boton boton-cuadrado">
+					<div class="icono icon-editar-20"></div>
+				</button>
+				<button type="submit" class="boton boton-cuadrado boton-rojo">
+					<div class="icono icon-no-16"></div>
+				</button>
+			</div>
+		</div>
+
+		<div class="row row-static row-edit">
+			<div class="col-izquierda"></div>
+			<div class="col-centro">
+				<h3>Añadir contenido</h3>
+				<!-- Nav tabs -->
+			  <ul class="nav nav-pills" role="tablist">
+			    <li role="presentation" class="active"><a href="#declaracion" aria-controls="declaracion" role="pill" data-toggle="tab">Declaración</a></li>
+			    <li role="presentation"><a href="#enlace" aria-controls="enlace" role="tab" data-toggle="pill">Enlace</a></li>
+			    <li role="presentation"><a href="#texto" aria-controls="texto" role="tab" data-toggle="pill">Texto</a></li>
+			    <li role="presentation"><a href="#imagen" aria-controls="imagen" role="tab" data-toggle="pill">Imagen</a></li>
+			  </ul>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+
+			    <div role="tabpanel" class="tab-pane active" id="declaracion">
+							<form>
+									<label for="entradilla-dec">Entradilla</label>
+			            <textarea name="entradilla-dec" id="entradilla-dec" rows="10">
+			                Introduce aquí la entradilla del texto. Es lo que se lee en la portada del perfil.
+			            </textarea>
+			            <script>
+			                CKEDITOR.replace( 'entradilla-dec' );
+			            </script>
+									</form>
+									<form>
+									<label for="contenido-dec">Texto expandido</label>
+			            <textarea name="contenido-dec" id="contenido-dec" rows="10">
+			                Introduce aquí el resto del texto.
+			            </textarea>
+			            <script>
+			                CKEDITOR.replace( 'contenido-dec' );
+			            </script>
+									<button type="submit" class="btn btn-default">Guardar</button>
+			        </form>
+					</div>
+
+			    <div role="tabpanel" class="tab-pane" id="enlace">
+						<form>
+						  <div class="form-group">
+						    <label for="texto-enlace">Texto del enlace</label>
+						    <input type="text" class="form-control" id="texto-enlace" placeholder="Introduce aquí el texto del enlace">
+						  </div>
+						  <div class="form-group">
+						    <label for="url-enlace">Dirección (URL)</label>
+						    <input type="text" class="form-control" id="url-enlace" placeholder="Introduce aquí la dirección (URL). Por ejemplo: http://web-de-ejemplo.com">
+						  </div>
+
+						  <button type="submit" class="btn btn-default">Guardar</button>
+						</form>
+					</div>
+
+			    <div role="tabpanel" class="tab-pane" id="texto">
+						<form>
+							<label for="texto-texto">Título del texto</label>
+							<input type="text" class="form-control" id="titulo-texto" placeholder="Introduce aquí el título del texto">
+							<label for="entradilla-txt">Entradilla</label>
+								<textarea name="entradilla-txt" id="entradilla-txt" rows="10">
+										Introduce aquí la entradilla del texto. Es lo que se lee en la portada del perfil.
+								</textarea>
+								<script>
+										CKEDITOR.replace( 'entradilla-txt' );
+								</script>
+						</form>
+						<form>
+								<label for="contenido-txt">Texto esxpandido</label>
+								<textarea name="contenido-txt" id="contenido-txt" rows="10">
+										Introduce aquí el resto del texto.
+								</textarea>
+								<script>
+										CKEDITOR.replace( 'contenido-txt' );
+								</script>
+								<button type="submit" class="btn btn-default">Guardar</button>
+						</form>
+					</div>
+
+			    <div role="tabpanel" class="tab-pane" id="imagen">
+						<div class="form-group">
+					    <form action="">
+								  <div class="form-group">
+								    <label for="texto-enlace">Nombre de la imagen</label>
+								    <input type="text" class="form-control" id="texto-enlace" placeholder="Introduce aquí el nombre de la imagen">
+								  </div>
+								  <div class="form-group">
+								    <label for="url-enlace">Descripción</label>
+								    <input type="text" class="form-control" id="url-enlace" placeholder="Introduce aquí la la descripción de la imagen">
+								  </div>
+
+					    	<label for="subir-imagen">Selecciona la imagen</label>
+					    	<input type="file" id="subir-imagen">
+					    	<button type="submit" class="btn btn-default">Guardar</button>
+					    </form>
+					  </div>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+</div>

@@ -1,0 +1,33 @@
+/* Overlay style */
+.overlay1,
+.overlay2,
+.overlay3,
+.overlay4
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 310;
+}
+
+
+/* Effects */
+.overlay-slidedown {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.overlay-slidedown.abre {
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	-webkit-transition: -webkit-transform 1s;
+	transition: transform 0.4s;
+}
+
+.overlay-slidedown.cierra {
+
+}
