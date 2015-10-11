@@ -121,7 +121,11 @@ module.exports = function (grunt) {
           'js/affix.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
-      }
+      },
+      personal: {
+  			src: [ 'js-personal/*.js', '!js-personal/modernizr.custom.js' ],
+  			dest:  'dist/js/personal.js'
+		  },
     },
 
     uglify: {
@@ -285,7 +289,17 @@ module.exports = function (grunt) {
           '**/*'
         ],
         dest: 'docs/dist/'
-      }
+      },
+
+
+      moderni: {
+        expand: true,
+        cwd: 'js-personal/',
+        src: 'modernizr.custom.js',
+  			dest: 'dist/js/'
+		  }
+
+
     },
 
     connect: {
