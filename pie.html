@@ -1,94 +1,10 @@
+  <script src="bootstrap/dist/js/modernizr.custom.js"></script>
   <script src="jquery/dist/jquery.min.js"></script>
   <script src="bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bootstrap/dist/js/personal.js"></script>
-
-<!--
- El siguiente script es para alinear los bordes de los submenús.
- -->
-   <script lang="javascript">
- /*
- $("#cdoc").on('show.bs.dropdown', function(e){
-	  o = $(this).offset().left;
-	  $(this).find("li").css('padding-left', o);
- });*/
-
-     $(document).on('show.bs.dropdown', function(e){
-	    $(e.target).find("li").css('padding-left', $(e.target).offset().left);
-
-	  } );
- </script>
-
-
-
-<!--
- El siguiente script es para el botón de idioma.
- -->
-
- <script type="text/javascript">
-$('document').ready(function(){
-  $('#txt-idioma').click(function(){
-    if($('#txt-idioma').text() == 'ENG')
-      $('#txt-idioma').text('ESP');
-    else
-      $('#txt-idioma').text('ENG');
-  });
-});
-</script>
-
-
-<!--
- El siguiente script es para twitter.
- Documentación: http://joelb.me/blog/2012/tutorial-creating-a-custom-tweet-button-with-counter/
- Modificado para eliminar hashtags y via@
- -->
-
-
-<script type="text/javascript">
-var API_URL = "http://cdn.api.twitter.com/1/urls/count.json",
-    TWEET_URL = "https://twitter.com/intent/tweet";
-
-$(".tweet").each(function() {
-    var elem = $(this),
-    // Use current page URL as default link
-    url = encodeURIComponent(elem.attr("data-url") || document.location.href),
-    // Use page title as default tweet message
-    text = elem.attr("data-text") || document.title,
-    related = encodeURIComponent(elem.attr("data-related")) || "";
-
-    // Set href to tweet page
-    elem.attr({
-        href: TWEET_URL + "?original_referer=" +
-                encodeURIComponent(document.location.href) + "&related=" + related +
-                "&source=tweetbutton&text=" + text + "&url=" + url
-
-    });
-
-    // Get count and set it as the inner HTML of .count
-    $.getJSON(API_URL + "?callback=?&url=" + url, function(data) {
-        elem.find(".count").html(data.count);
-    });
-});
-</script>
+  <script src="ckeditor/ckeditor.js"></script>
 
 
 
 
 
-<!--
- El siguiente script es para checkboxes http://www.csslab.cl/2014/03/17/checkboxes-con-estilo/
- -->
-
-<script type="text/javascript">
-var input = document.querySelectorAll("label.check input");
-if(input !== null) {
-  [].forEach.call(input, function(el) {
-    if(el.checked) {
-      el.parentNode.classList.add('c_on');
-    }
-    el.addEventListener("click", function(event) {
-      event.preventDefault();
-      el.parentNode.classList.toggle('c_on');
-    }, false);
-  });
-}
-</script>
