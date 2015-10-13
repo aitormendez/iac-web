@@ -490,14 +490,14 @@ module.exports = function (grunt) {
   grunt.registerTask('test-js', ['jshint:core', 'jshint:test', 'jshint:grunt', 'jscs:core', 'jscs:test', 'jscs:grunt', 'qunit']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
+	grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs', 'copy:moderni']);
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+	grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts' ,'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
