@@ -4,7 +4,7 @@
 
 */
 
-<script type="text/javascript">
+
 var input = document.querySelectorAll("label.check input");
 if(input !== null) {
   [].forEach.call(input, function(el) {
@@ -17,4 +17,3 @@ if(input !== null) {
     }, false);
   });
 }
-</script>
