@@ -1113,7 +1113,14 @@ p {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 15px;
-  border-bottom: 2px solid white;
+  &::after {
+    content: "";
+    display: block;
+    background-color: white;
+    height: 5px;
+    border-radius: @border-radius-base;
+    margin-top: 15px;
+  }
 }
 
 blockquote {

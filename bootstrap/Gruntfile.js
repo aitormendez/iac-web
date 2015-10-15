@@ -444,7 +444,17 @@ module.exports = function (grunt) {
           }
         ]
       }
+    },
+
+    webfont: {
+    iconos: {
+        src: 'iconos/*.svg',
+        dest: 'iconos-build',
+        options: {
+            fontFilename: 'iac'
+        }
     }
+}
 
   });
 
@@ -547,4 +557,8 @@ module.exports = function (grunt) {
       done();
     });
   });
+
+  grunt.loadNpmTasks('grunt-webfont');
+  grunt.registerTask('webfonts', ['webfont:iconos']);
+
 };

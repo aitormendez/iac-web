@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>editar-12</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="editar-12" sketch:type="MSArtboardGroup" fill="#4A4A4A">
+            <g id="Rectangle-55-+-Rectangle-55-Copy-+-Triangle-21-Copy-Copy-Copy" sketch:type="MSLayerGroup" transform="translate(5.904278, 6.461890) rotate(-135.000000) translate(-5.904278, -6.461890) translate(3.904278, -0.538110)">
+                <path d="M0.844706562,4.60814621 L3.67313361,4.60814621 L3.67313364,10.2227183 L0.844706562,10.2227183 L0.844706562,4.60814621 Z" id="Rectangle-55" sketch:type="MSShapeGroup"></path>
+                <path d="M0.844706574,11.6369318 L3.67313359,11.6369318 L3.67313362,12.3440386 C3.67313363,12.7345629 3.3486771,13.0511453 2.95940207,13.0511453 L1.55843815,13.0511453 C1.16425508,13.0511453 0.844706568,12.7372855 0.84470657,12.3440386 L0.844706574,11.6369318 Z" id="Rectangle-55-Copy" sketch:type="MSShapeGroup"></path>
+                <polygon id="Triangle-21" sketch:type="MSShapeGroup" points="2.25892024 0.323223298 3.67313381 3.15165035 0.844706581 3.15165041 "></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

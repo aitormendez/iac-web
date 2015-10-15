@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>contacto-32</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="contacto-32" sketch:type="MSArtboardGroup" fill="#4A4A4A">
+            <path d="M1.40622057,5 L0.992786407,5 C0.452362061,5 0,5.44881738 0,6.00246167 L0,25.9975383 C0,26.5605417 0.444485615,27 0.992786407,27 L31.0072136,27 C31.5476379,27 32,26.5511826 32,25.9975383 L32,6.00246167 C32,5.43945834 31.5555144,5 31.0072136,5 L30.5937794,5 L20.041973,16.5685525 C17.806737,19.0191703 14.1903471,19.0159734 11.958027,16.5685525 L1.40622057,5 Z M5.45245795,5 L26.5475422,5 L17.3489952,15.0291893 C16.603966,15.8414959 15.3942593,15.83956 14.6510054,15.0291893 L5.45245795,5 Z" id="Rectangle-45" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
