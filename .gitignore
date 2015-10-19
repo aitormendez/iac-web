@@ -3,6 +3,7 @@
 .#*
 _err.*
 .DS_Store
+…/DS_Store
 ckeditor/**
 jquery/**
 bootstrap/dist/**
