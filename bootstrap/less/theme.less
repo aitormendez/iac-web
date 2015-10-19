@@ -1849,11 +1849,7 @@ nav.columna-lat ul {//lateral
 }
 
 .col-centro {
-  .noticia-portada {
-    margin-bottom: 2em;
-    p:nth-last-child(2) {
-      margin: 0;
-    }
+  .noticia-portada, .noticia-individual {
     .metadato, .leer {
       font-size: 11px;
       text-transform: uppercase;
@@ -1864,11 +1860,14 @@ nav.columna-lat ul {//lateral
         color: white;
       }
     }
+  }
+  .noticia-portada {
+    margin-bottom: 2em;
+    p:nth-last-child(2) {
+      margin: 0;
+    }
     h1 {
       margin-bottom: .5em;
-    }
-    .leer {
-
     }
   }
 }
