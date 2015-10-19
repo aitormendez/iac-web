@@ -281,7 +281,7 @@ background-color: transparent;
 @icon-hover-color:            #FF9800;
 @color-iac:                   #EAEAEA;
 @color-socios:                #D7EBE9;
-@color-noticias:              #D5E1FA;
+@color-noticias:              #b9c6da;
 @color-editando:              #dbb800;
 
 @font-size-h1:            24px;
@@ -1272,7 +1272,7 @@ blockquote {
 //
 // DOCUMENTO (más detalles en estructura y tipografía)
 // --------------------------------------------------
-.row-documento {
+.row-documento, .row-noticias {
   padding-top: 20px;
 }
 
@@ -1810,4 +1810,62 @@ h2.editando {
 
 .cke {
   margin-bottom: 15px !important;
+}
+
+
+//
+// NOTICIAS
+// --------------------------------------------------
+
+nav.columna-lat ul {//lateral
+  padding: 0;
+  list-style: none;
+  @media (min-width: @screen-sm-min) {
+    padding-right: 50px;
+    margin-top: 30px;
+  }
+  li {
+    min-height: 2em;
+    margin-bottom: 10px;
+    &.activo {
+      display: inline-block;
+      background-color: @gray-dark;
+      color: white;
+      padding: .3em .6em;
+      border-radius: @border-radius-base;
+    }
+    a {
+      display: inline-block;
+      background-color: white;
+      color: @gray-dark;
+      padding: .3em .6em;
+      border-radius: @border-radius-base;
+      &:hover {
+        background-color: @icon-hover-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.col-centro {
+  .noticia-portada {
+    margin-bottom: 2em;
+    .metadato {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #eaecf2;
+      margin-bottom: .3em;
+      letter-spacing: 1px;
+      b {
+        color: white;
+      }
+    }
+    h1 {
+      margin-bottom: .5em;
+    }
+    .leer {
+
+    }
+  }
 }
