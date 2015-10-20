@@ -278,11 +278,12 @@ background-color: transparent;
 @btn-default-bg:              @gray-dark;
 @color-enlace:                #B0ADDA;
 @color-enlace-dark:           darken(@color-enlace, 10%);
-@icon-hover-color:            #FF9800;
+@icon-hover-color:            #d09b4d;
 @color-iac:                   #EAEAEA;
 @color-socios:                #D7EBE9;
 @color-noticias:              #b9c6da;
-@color-editando:              #dbb800;
+@color-editando:              #dfc956;
+@color-observatorio:          #67eb8f;
 
 @font-size-h1:            24px;
 @font-size-h2:            24px;
@@ -335,6 +336,10 @@ body, html {
 
 .fondo-noticias {
   background-color: @color-noticias;
+}
+
+.fondo-observatorio {
+  background-color: @color-observatorio;
 }
 
 
@@ -461,6 +466,41 @@ label.check {
   }
   &:hover {
       color: @gray-dark;
+  }
+}
+
+//PAGINACIÓN
+.pagination {
+  font-size: 16px;
+  li {
+    &.active, &:focus {
+      a {
+        background-color: @gray-dark !important;
+        &:hover {
+          background-color: @gray-dark !important;
+        }
+      }
+    }
+    a {
+      color: @gray-dark;
+      border: none;
+      margin-right: 10px;
+      border-radius: @border-radius-base;
+      &:hover {
+        background-color: @icon-hover-color;
+        color: white;
+      }
+    }
+    &:first-child, &:last-child {
+      a {
+        font-size: 20px;
+        background-color: transparent;
+        margin-right: 0;
+      }
+    }
+    &:nth-last-child(2) a {
+      margin-right: 0;
+    }
   }
 }
 
@@ -1848,33 +1888,32 @@ nav.columna-lat ul {//lateral
   }
 }
 
-.col-centro {
-  .noticia-portada, .noticia-individual {
-    .metadato, .leer {
-      font-size: 11px;
-      text-transform: uppercase;
-      color: #eaecf2;
-      margin-bottom: .3em;
-      letter-spacing: 1px;
-      a {
-        color: white;
-        font-weight: bold;
-        &:hover {
-          color: @gray-darker;
-        }
+
+.noticia-portada, .noticia-individual {
+  .metadato, .leer {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #eaecf2;
+    margin-bottom: .3em;
+    letter-spacing: 1px;
+    a {
+      color: white;
+      font-weight: bold;
+      &:hover {
+        color: @gray-darker;
       }
     }
-    .leer:hover {
-      color: @gray-dark;
-    }
   }
-  .noticia-portada {
-    margin-bottom: 2em;
-    p:nth-last-child(2) {
-      margin: 0;
-    }
-    h1 {
-      margin-bottom: .5em;
-    }
+  .leer:hover {
+    color: @gray-dark;
+  }
+}
+.noticia-portada {
+  margin-bottom: 2em;
+  p:nth-last-child(2) {
+    margin: 0;
+  }
+  h1 {
+    margin-bottom: .5em;
   }
 }
