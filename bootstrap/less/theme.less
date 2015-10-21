@@ -473,9 +473,10 @@ label.check {
 .pagination {
   font-size: 16px;
   li {
+<<<<<<< HEAD
     color: @gray-dark;
     background-color: white;
-    margin-right: 8px;
+    margin-right: 4px;
     border-radius: @border-radius-base;
     padding: 6px 12px;
     &:hover {
@@ -486,25 +487,34 @@ label.check {
       background-color: transparent;
       margin-right: 0;
       margin-left: 0;
-    }
-    span {
-      float: none;
-      font-size: 20px;
-      background-color: transparent;
-      border: none;
-      color: @gray-dark;
-      padding: 0;
-      &:hover {
-        background-color: transparent;
-        color: @icon-hover-color;
-      }
-      vertical-align: -4px;
-    }
+=======
     &.active, &:focus {
+      a {
         background-color: @gray-dark !important;
-        color: white;
+        &:hover {
+          background-color: @gray-dark !important;
+        }
+      }
+>>>>>>> parent of 16b57f9... nueva estructura nav paginación sin etiquetas <a>
     }
-    &:nth-last-child(2) {
+    a {
+      color: @gray-dark;
+      border: none;
+      margin-right: 10px;
+      border-radius: @border-radius-base;
+      &:hover {
+        background-color: @icon-hover-color;
+        color: white;
+      }
+    }
+    &:first-child, &:last-child {
+      a {
+        font-size: 20px;
+        background-color: transparent;
+        margin-right: 0;
+      }
+    }
+    &:nth-last-child(2) a {
       margin-right: 0;
     }
   }
