@@ -2103,7 +2103,7 @@ nav.columna-lat ul {//lateral
       margin-bottom: -32767px;
       article {
         h1 {
-          font-size: 20px;
+          font-size: 18px;
           font-weight: normal;
           padding-top: 15px;
           padding-bottom: 30px;
@@ -2137,6 +2137,61 @@ nav.columna-lat ul {//lateral
     &.right {
       text-align: right;
       padding-right: 15px;
+    }
+  }
+}
+
+// Actividades Socios
+//----------------------
+
+.row-home-socios {
+  display: block;
+  margin-top: 15px;
+  background-color: @gray-dark;
+  border-radius: @border-radius-small;
+  overflow: hidden;
+  margin-bottom: 100px;
+  a {
+    display: inline-block;
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+    padding-top: 15px;
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+      color: @gray-light;
+      padding-bottom: 5px;
+    }
+    &:hover {
+      background-color: @icon-hover-color;
+      h1 {
+        color: white;
+      }
+    }
+  }
+}
+
+// Faldón logotipos
+//----------------------
+.faldon-logotipos {
+  background-color: @gray-light;
+  padding: 20px 100px 100px 100px;
+  .centrar {
+    text-align: center;
+    .logo {
+      display: inline-block;
+      height: 50px;
+      width: 80px;
+      border-radius: @border-radius-large;
+      background-color: white;
+    }
+    .ministerio {
+      display: block;
+      font-size: 14px;
+      color: @gray-lighter;
+      text-shadow: 0 1px 0px @gray-dark;
+      width: 50%;
+      margin: 20px auto;
     }
   }
 }
