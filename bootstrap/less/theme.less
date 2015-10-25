@@ -1374,7 +1374,6 @@ blockquote {
       position: relative;
       padding-left: 0px;
       font-size: .8em;
-
       &:before {
         position: absolute;
         display: block;
@@ -2259,7 +2258,7 @@ nav.columna-lat ul {//lateral
   background-color: white;
   border-radius: @border-radius-small;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   .container {
     padding: 0;
     a {
@@ -2287,15 +2286,37 @@ nav.columna-lat ul {//lateral
 //----------------------
 .faldon-logotipos {
   background-color: @gray-light;
-  padding: 20px 100px 100px 100px;
+  padding: 30px 100px 100px 100px;
   .centrar {
     text-align: center;
     .logo {
       display: inline-block;
-      height: 50px;
-      width: 80px;
+      height: 120px;
+      width: 120px;
       border-radius: @border-radius-large;
-      background-color: white;
+      background-color: @gray-lighter;
+      .tabla {
+        display: table;
+        a {
+          display: table-cell;
+          vertical-align: middle;
+          padding: 10px;
+          width: 120px;
+          height: 120px;
+          border-radius: @border-radius-large;
+          img {
+            max-width: 100px;
+            max-height: 100px;
+            filter: grayscale(100%);
+          }
+          &:hover {
+            background-color: white;
+            img {
+              filter: grayscale(0%);
+            }
+          }
+        }
+      }
     }
     .ministerio {
       display: block;
@@ -2304,6 +2325,12 @@ nav.columna-lat ul {//lateral
       text-shadow: 0 1px 0px @gray-dark;
       width: 50%;
       margin: 20px auto;
+    }
+    .logo-ministerio {
+      width: 200px;
+      height: 42px;
+      background-image: url("/img-contenido/Logotipo_del_Ministerio_de_Educación,_Cultura_y_Deporte copia_PEQ.png");
+      margin: 0 auto;
     }
   }
 }
