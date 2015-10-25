@@ -278,7 +278,7 @@ background-color: transparent;
 @btn-default-bg:              @gray-dark;
 @color-enlace:                #B0ADDA;
 @color-enlace-dark:           darken(@color-enlace, 10%);
-@icon-hover-color:            #d09b4d;
+@icon-hover-color:            @color-enlace;
 @color-iac:                   #EAEAEA;
 @color-socios:                #D7EBE9;
 @color-noticias:              #b9c6da;
@@ -289,6 +289,10 @@ background-color: transparent;
 @font-size-h1:            24px;
 @font-size-h2:            24px;
 @font-size-h3:            20px;
+
+@altura-sm: 300px;
+@altura-md: 400px;
+@altura-lg: 500px;
 
 //
 // MIXINS
@@ -937,7 +941,7 @@ input:focus:-ms-input-placeholder {
           }
           &.menu-soci {
             max-width: 60px;
-            margin-right: 60px;
+            margin-right: 100px;
           }
           &.menu-docu {
             max-width: 90px;
@@ -1942,15 +1946,16 @@ nav.columna-lat ul {//lateral
 
 
 .row-home-iac {
-  background-color: @color-claro;
-  color: @gray-light;
+  background-color: @gray-dark;
+  color: @gray-lighter;
   border-radius: @border-radius-small;
-  margin: 15px 0;
+
   .que-es {
     padding-top: 10px;
+    padding-left: 0;
     p {
       font-size: 12px;
-      color: @gray;
+      color: white;
     }
   }
   .noticia {
@@ -1959,37 +1964,121 @@ nav.columna-lat ul {//lateral
     h1 {
       font-size: 20px;
       font-weight: normal;
+      color: @gray-light;
     }
     p {
       font-size: 12px;
-    }
-  }
-  @media (min-width: @screen-sm-min) {
-    margin: 15px 50px 15px 0px;
-    display: table;
-    [class*="col-"] {
-      display: table-cell;
-      float: none;
+      color: @gray-light;
     }
   }
 }
 
 .row-home-editorial {
+  background-color: @color-claro;
   .editorial {
-    background-color: white;
-    height: 300px;
-    padding: 30px 35px;
-    h1 {
-      font-size: 20px;
-      font-weight: normal;
+    padding: 15px 30px 15px 0;
+    display: table;
+    .ariadna {
+      position: absolute;
+      background-color: @color-iac;
+      a {
+        display: block;
+        color: @gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 3px 7px;
+      }
+      &:hover {
+        background-color: @color-enlace;
+        a {
+          color: white;
+        }
+
+      }
     }
-    p {
-      font-size: 12px;
+    article {
+      padding-top: 40px;
+      display: table-cell;
+      vertical-align: middle;
+      h1 {
+        font-size: 20px;
+        font-weight: normal;
+      }
+      p {
+        font-size: 12px;
+      }
     }
+
   }
+
   @media (min-width: @screen-sm-min) {
-    //margin: 15px 65px 15px 15px;
+    .editorial {
+      height: @altura-sm;
+    }
+    .carousel-inner {
+      height: @altura-sm;
+      .item {
+        height: @altura-sm;
+        figure {
+          height: @altura-sm;
+          img {
+            max-height: @altura-sm;
+          }
+          &:hover {
+            figcaption {
+              height: @altura-sm;
+            }
+          }
+        }
+      }
+    }
   }
+  @media (min-width: @screen-md-min) {
+    .editorial {
+      height: @altura-md;
+    }
+    .carousel-inner {
+      height: @altura-md;
+      .item {
+        height: @altura-md;
+        figure {
+          height: @altura-md;
+          img {
+            max-height: @altura-md;
+          }
+          &:hover {
+            figcaption {
+              height: @altura-md;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: @screen-lg-min) {
+    .editorial {
+      height: @altura-lg;
+    }
+    .carousel-inner {
+      height: @altura-lg;
+      .item {
+        height: @altura-lg;
+        figure {
+          height: @altura-lg;
+          img {
+            max-height: @altura-lg;
+          }
+          &:hover {
+            figcaption {
+              height: @altura-lg;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 
   // carrusel imagenes
   //------------------------
@@ -1997,12 +2086,9 @@ nav.columna-lat ul {//lateral
     padding: 0;
     .carousel {
       .carousel-inner {
-        height: 300px;
-        background-color: @gray;
+        background-color: @color-iac;
         .item {
-          height: 300px;
           figure {
-            height: 300px;
             img {
               position: absolute;
             	top: 0;
@@ -2010,7 +2096,6 @@ nav.columna-lat ul {//lateral
             	left: 0;
             	right: 0;
             	margin: auto;
-              max-height: 300px;
               max-width: 100%;
             }
           }
@@ -2080,6 +2165,21 @@ nav.columna-lat ul {//lateral
       height: 300px;
 	    transition: height 0.35s;
     }
+    @media (min-width: @screen-sm-min) {
+      figcaption  {
+        height: @altura-sm;
+      }
+    }
+    @media (min-width: @screen-md-min) {
+      figcaption  {
+        height: @altura-md;
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      figcaption  {
+        height: @altura-md;
+      }
+    }
   }
 }
 
@@ -2090,32 +2190,39 @@ nav.columna-lat ul {//lateral
   margin-top: 40px;
   background-color: white;
   border-radius: @border-radius-small;
-  .item {
-    opacity: 0;
-    transition: opacity 2s;
-    overflow: hidden;
-    &.active {
-      opacity: 1;
-    }
-    a {
-      display: inline-block;
-      padding-bottom: 32767px;
-      margin-bottom: -32767px;
-      article {
-        h1 {
-          font-size: 18px;
-          font-weight: normal;
-          padding-top: 15px;
-          padding-bottom: 30px;
+  .container {
+    padding: 0;
+    .item {
+      opacity: 0;
+      transition: opacity 2s;
+      overflow: hidden;
+      &.active {
+        opacity: 1;
+      }
+      a {
+        display: inline-block;
+        padding-bottom: 32767px;
+        margin-bottom: -32767px;
+        &:first-child {
+        }
+        &:last-child {
+        }
+        article {
+          h1 {
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 15px;
+            padding-bottom: 30px;
+          }
+        }
+        &:hover {
+          background-color: @icon-hover-color;
+          h1 {
+            color: white;
+          }
         }
       }
-      &:hover {
-        background-color: @gray-dark;
-        h1 {
-          color: white;
-        }
-      }
-    }
+  }
   }
   .carousel {
     width: 100%
@@ -2147,25 +2254,28 @@ nav.columna-lat ul {//lateral
 .row-home-socios {
   display: block;
   margin-top: 15px;
-  background-color: @gray-dark;
+  background-color: white;
   border-radius: @border-radius-small;
   overflow: hidden;
   margin-bottom: 100px;
-  a {
-    display: inline-block;
-    padding-bottom: 32767px;
-    margin-bottom: -32767px;
-    padding-top: 15px;
-    h1 {
-      font-size: 18px;
-      font-weight: normal;
-      color: @gray-light;
-      padding-bottom: 5px;
-    }
-    &:hover {
-      background-color: @icon-hover-color;
+  .container {
+    padding: 0;
+    a {
+      display: inline-block;
+      padding-bottom: 32767px;
+      margin-bottom: -32767px;
+      padding-top: 15px;
       h1 {
-        color: white;
+        font-size: 18px;
+        font-weight: normal;
+        color: @gray;
+        padding-bottom: 5px;
+      }
+      &:hover {
+        background-color: @icon-hover-color;
+        h1 {
+          color: white;
+        }
       }
     }
   }
