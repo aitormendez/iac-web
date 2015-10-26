@@ -1935,13 +1935,12 @@ nav.columna-lat ul {//lateral
 //
 // HOME
 // --------------------------------------------------
-  @media (min-width: @screen-sm-min) {
+@media (min-width: @screen-sm-min) {
   [class*="row-home-"] {
       margin-right: 50px;
+      margin-left: 0;
   }
 }
-
-
 
 
 .row-home-iac {
@@ -1952,7 +1951,7 @@ nav.columna-lat ul {//lateral
   .que-es {
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 0;
+
     p {
       font-size: 12px;
       color: white;
@@ -1975,43 +1974,61 @@ nav.columna-lat ul {//lateral
 
 .row-home-editorial {
   background-color: @color-claro;
-  margin-top: 20px;
-  .editorial {
-    padding: 15px 30px 15px 0;
-    display: table;
-    .ariadna {
-      position: absolute;
-      background-color: @color-iac;
-      a {
-        display: block;
-        color: @gray;
-        font-size: 12px;
-        letter-spacing: 1px;
-        padding: 3px 7px;
-      }
-      &:hover {
-        background-color: @color-enlace;
+  margin-top: 0px;
+  .container {
+    .editorial {
+      padding: 15px 30px 15px 15px;
+      display: table;
+      height: @altura-sm;
+      .ariadna {
+        position: absolute;
+        background-color: @color-iac;
         a {
-          color: white;
+          display: block;
+          color: @gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          padding: 3px 7px;
         }
-
+        &:hover {
+          background-color: @color-enlace;
+          a {
+            color: white;
+          }
+        }
+      }
+      article {
+        padding-top: 40px;
+        display: table-cell;
+        vertical-align: middle;
+        h1 {
+          font-size: 20px;
+          font-weight: normal;
+        }
+        p {
+          font-size: 12px;
+        }
       }
     }
-    article {
-      padding-top: 40px;
-      display: table-cell;
-      vertical-align: middle;
-      h1 {
-        font-size: 20px;
-        font-weight: normal;
-      }
-      p {
-        font-size: 12px;
+    .carousel-inner {
+      height: @altura-sm;
+      .item {
+        height: @altura-sm;
+        figure {
+          height: @altura-sm;
+          img {
+            max-height: @altura-sm;
+          }
+          &:hover {
+            figcaption {
+              height: @altura-sm;
+            }
+          }
+        }
       }
     }
-
   }
-
+  // altura carrusel imagenes
   @media (min-width: @screen-sm-min) {
     .editorial {
       height: @altura-sm;
@@ -2078,11 +2095,7 @@ nav.columna-lat ul {//lateral
       }
     }
   }
-
-
-
   // carrusel imagenes
-  //------------------------
   section {
     padding: 0;
     .carousel {
@@ -2123,6 +2136,40 @@ nav.columna-lat ul {//lateral
       }
     }
   }
+}
+
+// @media screen
+
+@media (min-width: @screen-sm-min) {
+  [class*="row-home-"] {
+      margin-right: 50px;
+      margin-left: 0;
+  }
+
+  .row-home-iac {
+    .container {
+      .que-es {
+        padding-left: 0;
+      }
+    }
+  }
+  .row-home-editorial {
+    margin-top: 20px;
+    .container {
+      padding: 0;
+    }
+  }
+  .row-home-noticias {
+    .container {
+
+    }
+  }
+  .row-home-socios {
+    .container {
+
+    }
+  }
+
 }
 
 // Efecto hover carrusel imágenes
@@ -2190,7 +2237,6 @@ nav.columna-lat ul {//lateral
 .row-home-noticias {
   margin-top: 40px;
   background-color: white;
-  border-radius: @border-radius-small;
   .container {
     padding: 0;
     .item {
@@ -2201,19 +2247,19 @@ nav.columna-lat ul {//lateral
         opacity: 1;
       }
       a {
-        display: inline-block;
-        padding-bottom: 32767px;
-        margin-bottom: -32767px;
-        &:first-child {
-        }
+        display: block;
         &:last-child {
+          h1 {
+            padding-bottom: 50px;
+          }
         }
         article {
           h1 {
             font-size: 18px;
             font-weight: normal;
             padding-top: 15px;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
           }
         }
         &:hover {
@@ -2249,6 +2295,30 @@ nav.columna-lat ul {//lateral
   }
 }
 
+@media (min-width: @screen-sm-min) {
+  .row-home-noticias {
+    .container {
+      .item {
+        a {
+          display: inline-block;
+          padding-bottom: 32767px;
+          margin-bottom: -32767px;
+          &:last-child {
+            h1 {
+              padding-bottom: 30px;
+            }
+          }
+          article {
+            h1 {
+              padding-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // Actividades Socios
 //----------------------
 
@@ -2256,21 +2326,17 @@ nav.columna-lat ul {//lateral
   display: block;
   margin-top: 15px;
   background-color: white;
-  border-radius: @border-radius-small;
-  overflow: hidden;
-  margin-bottom: 40px;
+
+  margin-bottom: 15px;
   .container {
-    padding: 0;
     a {
-      display: inline-block;
-      padding-bottom: 32767px;
-      margin-bottom: -32767px;
+      display: block;
       padding-top: 15px;
       h1 {
         font-size: 18px;
         font-weight: normal;
         color: @gray;
-        padding-bottom: 5px;
+        padding-bottom: 15px;
       }
       &:hover {
         background-color: @icon-hover-color;
@@ -2282,11 +2348,29 @@ nav.columna-lat ul {//lateral
   }
 }
 
+@media (min-width: @screen-sm-min) {
+  .row-home-socios {
+    margin-bottom: 40px;
+    overflow: hidden;
+    .container {
+      padding: 0;
+      a {
+        display: inline-block;
+        padding-bottom: 32767px;
+        margin-bottom: -32767px;
+        h1 {
+          padding-bottom: 5px
+        }
+      }
+    }
+  }
+}
+
 // Faldón logotipos
 //----------------------
 .faldon-logotipos {
   background-color: @gray-light;
-  padding: 30px 100px 100px 100px;
+  padding: 30px 30px 100px 30px;
   .centrar {
     text-align: center;
     .logo {
@@ -2323,7 +2407,7 @@ nav.columna-lat ul {//lateral
       font-size: 14px;
       color: @gray-lighter;
       text-shadow: 0 1px 0px @gray-dark;
-      width: 50%;
+      width: 70%;
       margin: 20px auto;
     }
     .logo-ministerio {
@@ -2332,5 +2416,26 @@ nav.columna-lat ul {//lateral
       background-image: url("/img-contenido/Logotipo_del_Ministerio_de_Educacion_Cultura_y_Deporte copia_PEQ.png");
       margin: 0 auto;
     }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .faldon-logotipos {
+    padding: 30px 100px 100px 100px;
+    .ministerio {
+      width: 60% !important;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .faldon-logotipos .ministerio {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .faldon-logotipos .ministerio {
+    width: 30% !important;
   }
 }
