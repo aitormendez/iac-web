@@ -280,10 +280,10 @@ background-color: transparent;
 @color-enlace-dark:           darken(@color-enlace, 10%);
 @icon-hover-color:            @color-enlace;
 @color-iac:                   #EAEAEA;
-@color-socios:                #D7EBE9;
-@color-noticias:              #b9c6da;
+@color-socios:                @color-iac;
+@color-noticias:              @color-iac;
 @color-editando:              #dfc956;
-@color-observatorio:          #67eb8f;
+@color-observatorio:          @color-iac;
 @color-claro:                 #d7faf4;
 
 @font-size-h1:            24px;
@@ -536,9 +536,8 @@ button {
   padding: 15px;
   h3 {
     color: @gray-light;
-    font-family: 'Homenaje', sans-serif;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 12px;
     margin-top: 0;
   }
   span {
@@ -579,6 +578,7 @@ button {
 input, .form-control, textarea {
   border: none;
   box-shadow: none;
+  color: @gray-lighter;
   &:focus {
     background-color: @gray-dark;
     color: white;
@@ -1038,48 +1038,57 @@ input:focus:-ms-input-placeholder {
 // --------------------------------------------------
 
 
+
+
 .container-principal {
   margin-top: 150px;
   padding-right: 0;
   padding-left: 0;
 }
 
-.col-izquierda {
+.col-izquierda, .col-izquierda-b {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 50px;
   min-height: 1px;
 }
-.col-centro {
+.col-centro, .col-centro-b {
   padding-right: 15px;
   padding-left: 15px;
   min-height: 1px;
 }
-.col-derecha {
+.col-derecha, .col-derecha-b {
   min-height: 1px;
 }
 
+@ancho-col-izquierda-sm:    30%;
+@ancho-col-centro-sm:       50%;
+@ancho-col-derecha-sm:      20%;
+@margen-izq-col-derecha-sm: 80%;
+@ancho-col-izquierda-lg:    25%;
+@ancho-col-centro-lg:       45%;
+@ancho-col-derecha-lg:      20%;
+@margen-izq-col-derecha-lg: 70%;
 
 @media (min-width: @screen-sm-min) {
   .container-principal {
     margin-top: 100px;
   }
 
-  .col-izquierda {
+  .col-izquierda, .col-izquierda-b {
     position: fixed;
-    width: 30%;
+    width: @ancho-col-izquierda-sm;
     margin-bottom: 0px;
   }
-  .col-centro {
+  .col-centro, .col-centro-b {
     float: left;
-    margin-left: 30%;
-    width: 50%;
+    margin-left: @ancho-col-izquierda-sm;
+    width: @ancho-col-centro-sm;
   }
-  .col-derecha {
+  .col-derecha, .col-derecha-b {
     float: left;
-    width: 20%;
-    padding-right: 50px;
-    padding-left: 15px;
+    width: @ancho-col-derecha-sm;
+    padding: 15px 50px 15px 15px;
   }
   .row-static {
     .col-izquierda {
@@ -1092,19 +1101,65 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-
 @media (min-width: @screen-lg-min) {
-  .col-izquierda {
-    width: 25%;
+  .col-izquierda, .col-izquierda-b {
+    width: @ancho-col-izquierda-lg;
   }
-  .col-centro {
-    margin-left: 25%;
-    width: 45%;
+  .col-centro, .col-centro-b {
+    margin-left: @ancho-col-izquierda-lg;
+    width: @ancho-col-centro-lg;
   }
-  .col-derecha {
-    width: 20%;
+  .col-derecha, .col-derecha-b {
+    width: @ancho-col-derecha-lg;
   }
 }
+
+//estructura para diseño con columna izquierda ancha 100%
+//(la llamo "b" a esta estructura) se usa en docs individual,
+//noticias individual, etc.
+
+@media (min-width: @screen-sm-min) {
+  .col-izquierda-b {
+    padding: 15px 0;
+    width: 100%;
+    background-color: @color-claro;
+    h1, p, nav {
+      max-width: @ancho-col-izquierda-sm;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    h3 {
+      margin-left: 15px;
+    }
+  }
+  .col-centro-b {
+    position: absolute;
+    background-color: white;
+    margin-top: 40px;
+    padding: 35px 50px 100px 50px;
+  }
+  .col-derecha-b {
+    position: fixed;
+    margin-left: @margen-izq-col-derecha-sm;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .col-izquierda-b {
+    h1, p {
+      max-width: @ancho-col-izquierda-lg;
+    }
+  }
+  .col-centro-b {
+
+  }
+  .col-derecha-b {
+    margin-left: @margen-izq-col-derecha-lg;
+  }
+}
+
+
+
 
 
 //
