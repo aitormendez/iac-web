@@ -2494,3 +2494,64 @@ nav.columna-lat ul {//lateral
     width: 30% !important;
   }
 }
+
+//
+//IMPRIMIR PDF
+//-----------------------------------
+.imprimir {
+  * {
+    background-color: transparent !important;
+    color: black !important;
+  }
+
+  .pagina {
+    padding: 100px 50px 50px 200px;
+    .logo {
+      right: 0;
+      text-align: right;
+      height: 120px;
+      vertical-align: middle;
+      .icon-logo-60 {
+        display: inline-block;
+        font-size: 60px;
+      }
+      .mombre-iac {
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
+        font-family: 'Homenaje', sans-serif;
+        width: 60px;
+        text-align: left;
+        text-transform: uppercase;margin-right: 70px;
+        margin-left: 10px;
+      }
+    }
+    .ariadna {
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      margin-bottom: 100px;
+      h1 {
+        margin: 0;
+      }
+    }
+    h1 {
+      font-size: 35px;
+      margin-top: 100px;
+      margin-bottom: 50px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      margin-top: 100px;
+      margin-bottom: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+}
