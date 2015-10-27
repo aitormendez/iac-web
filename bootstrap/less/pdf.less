@@ -1,0 +1,67 @@
+//
+//IMPRIMIR PDF
+//-----------------------------------
+.imprimir {
+  * {
+    background-color: transparent !important;
+    color: black !important;
+  }
+
+  .pagina {
+    padding: 20px;
+    * {
+      font-family: 'Asap', sans-serif;
+    }
+    [class*="icon-"] {
+      font-family: 'IAC' !important;
+    }
+    .logo {
+      margin-bottom: 50px;
+      .icon-logo-60 {
+        display: inline-block;
+        font-size: 60px;
+        margin: 0;
+      }
+      .mombre-iac {
+        font-size: 18px;
+        line-height: 18px;
+        display: inline-block;
+        font-family: 'Homenaje', sans-serif;
+        width: 60px;
+        text-align: left;
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+    }
+
+    .cabecera {
+      .ariadna {
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      .metadato {
+        margin-top: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+    .principal {
+      h1 {
+        font-size: 35px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+      h2 {
+        font-size: 24px;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

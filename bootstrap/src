@@ -1,0 +1,53 @@
+.imprimir * {
+  background-color: transparent !important;
+  color: black !important;
+}
+.imprimir .pagina {
+  padding: 0px;
+}
+.imprimir .pagina .logo {
+  right: 0;
+  text-align: right;
+  height: 120px;
+  vertical-align: middle;
+}
+.imprimir .pagina .logo .icon-logo-60 {
+  display: inline-block;
+  font-size: 60px;
+}
+.imprimir .pagina .logo .mombre-iac {
+  font-size: 18px;
+  line-height: 18px;
+  display: inline-block;
+  font-family: 'Homenaje', sans-serif;
+  width: 60px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.imprimir .pagina .ariadna {
+  padding: 0;
+  margin: 0;
+}
+.imprimir .pagina header {
+  margin-bottom: 100px;
+}
+.imprimir .pagina header h1 {
+  margin: 0;
+}
+.imprimir .pagina h1 {
+  font-size: 35px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.imprimir .pagina h1:first-child {
+  margin-top: 0;
+}
+.imprimir .pagina h2 {
+  font-size: 24px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.imprimir .pagina h2:first-child {
+  margin-top: 0;
+}

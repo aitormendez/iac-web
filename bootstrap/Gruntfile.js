@@ -179,6 +179,17 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
+      },
+      compilePDF: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'pdf.css.map',
+          sourceMapFilename: 'dist/css/pdf.css.map'
+        },
+        src: ['less/pdf.less', 'less/icon-font.less'],
+        dest: 'dist/css/pdf.css'
       }
     },
 
@@ -206,6 +217,12 @@ module.exports = function (grunt) {
         cwd: 'docs/examples/',
         src: ['**/*.css'],
         dest: 'docs/examples/'
+      },
+      pdf: {
+        options: {
+          map: true
+        },
+        src: 'dist/css/<%= pkg.name %>-pdf.css'
       }
     },
 
@@ -251,6 +268,10 @@ module.exports = function (grunt) {
           'docs/assets/css/src/docs.css'
         ],
         dest: 'docs/assets/css/docs.min.css'
+      },
+      pdf: {
+        src: 'dist/css/pdf.css',
+        dest: 'dist/css/pdf.min.css'
       }
     },
 
@@ -503,8 +524,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs', 'copy:moderni']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compilePDF']);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'autoprefixer:pdf', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme', 'cssmin:pdf']);
 
   // Full distribution task.
 	grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts' ,'dist-js']);
