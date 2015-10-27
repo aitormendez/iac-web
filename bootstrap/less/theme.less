@@ -475,6 +475,19 @@ label.check {
 }
 
 //PAGINACIÓN
+.col-centro-b {
+  .paginacion {
+    background-color: @color-iac;
+    width: 100%;
+    text-align: center;
+    padding: 15px 50px 5px 50px;
+    .pagination {
+      border-radius: 0;
+      margin: 0;
+    }
+  }
+
+}
 .pagination {
   font-size: 16px;
   li {
@@ -488,6 +501,7 @@ label.check {
       &:hover {
         background-color: @gray-dark !important;
       }
+      
     }
     a {
       color: @gray-dark;
@@ -1037,9 +1051,6 @@ input:focus:-ms-input-placeholder {
 // ESTRUCTURA CONTENIDO
 // --------------------------------------------------
 
-
-
-
 .container-principal {
   margin-top: 150px;
   padding-right: 0;
@@ -1136,7 +1147,14 @@ input:focus:-ms-input-placeholder {
     position: absolute;
     background-color: white;
     margin-top: 40px;
-    padding: 35px 50px 100px 50px;
+    margin-bottom: 100px;
+    padding: 0 0 50px 0;
+   > * {
+     padding-top: 20px;
+   }
+   article {
+     padding: 15px 50px;
+   }
   }
   .col-derecha-b {
     position: fixed;
@@ -1242,7 +1260,7 @@ blockquote {
 .metadato {
   font-size: 14px;
   text-transform: uppercase;
-  color: @gray-light;
+  color: @gray;
 }
 
 .col-centro {
@@ -1957,24 +1975,37 @@ nav.columna-lat ul {//lateral
   }
 }
 
+.leer {
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: @color-iac;
+  color: @gray-light;
+  padding: 2px 6px 2px 6px;
+  border-radius: @border-radius-base;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  &:hover {
+    color: white;
+    background-color: @color-enlace;
+  }
+}
+
 
 .noticia-portada, .noticia-individual {
-  .metadato, .leer {
+  .metadato {
     font-size: 11px;
     text-transform: uppercase;
-    color: #eaecf2;
+    color: @gray-light;
     margin-bottom: .3em;
     letter-spacing: 1px;
     a {
-      color: white;
+      color: @color-enlace;
       font-weight: bold;
       &:hover {
         color: @gray-darker;
       }
     }
-  }
-  .leer:hover {
-    color: @gray-dark;
   }
 }
 .noticia-portada {
