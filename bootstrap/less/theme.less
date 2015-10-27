@@ -108,6 +108,7 @@ background-color: transparent;
 
 // Default navbar
 .navbar-default {
+position: static; //no fijar navbar (más abajo se fija para screen-min-sm)
 
 
   .navbar-nav > .open > a,
@@ -137,12 +138,21 @@ background-color: transparent;
   }
 }
 
+@media (min-width: @screen-sm-min) { //volver a fijar el navbar
+  .navbar-default {
+    position: fixed;
+  }
+
+}
+
+
 // Undo rounded corners in static and fixed navbars
 .navbar-static-top,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   border-radius: 0;
 }
+
 
 // Fix active state of dropdown items in collapsed mode
 @media (max-width: @grid-float-breakpoint-max) {
@@ -501,7 +511,7 @@ label.check {
       &:hover {
         background-color: @gray-dark !important;
       }
-      
+
     }
     a {
       color: @gray-dark;
