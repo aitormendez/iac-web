@@ -1144,7 +1144,7 @@ input:focus:-ms-input-placeholder {
     padding: 15px 0;
     width: 100%;
     background-color: @color-claro;
-    h1, p, nav {
+    > * {
       max-width: @ancho-col-izquierda-sm;
       padding-left: 15px;
       padding-right: 15px;
@@ -1160,10 +1160,10 @@ input:focus:-ms-input-placeholder {
     margin-bottom: 100px;
     padding: 0 0 50px 0;
    > * {
-     padding-top: 20px;
+     padding-top: 50px;
    }
    article {
-     padding: 15px 50px;
+     padding: 0 50px 100px 50px;
    }
   }
   .col-derecha-b {
@@ -1412,6 +1412,12 @@ blockquote {
 // --------------------------------------------------
 .row-documento, .row-noticias {
   padding-top: 20px;
+}
+
+.row-documento {
+  .col-centro-b {
+    padding: 0 50px 100px 50px;
+  }
 }
 
 //
