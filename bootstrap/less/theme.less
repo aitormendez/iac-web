@@ -1061,6 +1061,48 @@ input:focus:-ms-input-placeholder {
 // ESTRUCTURA CONTENIDO
 // --------------------------------------------------
 
+//menú lateral
+
+.menu-lateral {
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      &.activo {
+        display: inline-block;
+        background-color: @gray;
+        color: white;
+        padding: 5px 10px;
+        border-radius: @border-radius-base;
+      }
+      a {
+        background-color: white;
+        padding: 5px 10px;
+        }
+        &:hover {
+          a {
+            background-color: @color-enlace;
+            color: white;
+          }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .menu-lateral {
+    li {
+      margin-bottom: 10px;
+      a {
+        display: inline-block;
+        border-radius: @border-radius-base;
+      }
+    }
+  }
+}
+
+// columnas
+
 .container-principal {
   margin-top: 150px;
   padding-right: 0;
@@ -1163,7 +1205,7 @@ input:focus:-ms-input-placeholder {
      padding-top: 50px;
    }
    article {
-     padding: 0 50px 100px 50px;
+     padding: 0 50px;
    }
   }
   .col-derecha-b {
@@ -1423,169 +1465,52 @@ blockquote {
 //
 // LISTADO SOCIOS QUIENES SOMOS
 // --------------------------------------------------
-.tab-panel {
-  .row {
-    .sp-thumb-logo {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      background-color: white;
-      vertical-align: top;
-      margin-bottom: 15px;
-      .sp-thumb-logo-logo {
-        img {
-          max-height: 130px;
-          max-width: 170px;
-        }
-      }
-      .caption {
-        padding: 0;
-        bottom: 0;
-        h3 {
-          font-size: 1em;
-          color: @gray-light;
-
-        }
-      }
-      &:hover {
-        opacity: .7;
-        filter: grayscale(100%);
-      }
-    }
-  }
-  .h2-lista {
-    padding-left: 0px;
-  }
-  .li-item {
-    border-top: 2px solid rgba(255,255,255,.4);
-    .li-a-item {
-      display: block;
-      position: relative;
-      padding-left: 0px;
-      font-size: .8em;
-      &:before {
-        position: absolute;
-        display: block;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-family: "IAC-icon-font";
-        font-size: 24px;
-        content: "\e61d";
-        color: rgba(255,255,255,.3);
-        text-align: right;
-        padding-right: 15px;
-      }
-
-      &:hover {
-        &:before {
-          position: absolute;
-          display: block;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          font-family: "451-icon-font";
-          font-size: 24px;
-          content: "\e61d";
-          color: rgba(255,255,255,.8);
-          text-align: right;
-          padding-right: 15px;
-        }
-      }
-      p {
-        margin: 0;
-        max-width: 75%;
-        &.nombre {
-          padding-top: .6em;
-        }
-        &.descrip {
-          color: @gray-light-med;
-          font-style: italic;
-          padding-bottom: .6em;
-        }
-      }
-    }
-  }
+.margen-izq-50 {
+  padding-left: 50px;
 }
+
+.lista-enlaces { // listado de socios
+  padding: 0;
+  li {
+    list-style-type: none;
+    a {
+      display: inline-block;
+      font-size: 18px;
+      color: @gray;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &.nombre {
+        width: 90%;
+        padding-left: 50px;
+        .cargo {
+          font-weight: bold;
+        }
+      }
+      &.contacto {
+        text-align: center;
+        width: 10%;
+        font-size: 16px;
+        float: right;
+      }
+      &:hover {
+        background-color: @gray-light;
+        color: white;
+      }
+    }
+  }
+
+}
+
+
+
 
 @media (min-width: @screen-sm-min) {
-  .tab-panel {
-    .row {
-      margin: 0;
-      .sp-thumb-logo {
-        display: inline-block;
-        margin-bottom: 15px;
-        margin-left: 15px;
-        border-radius: 3px;
-        width: 150px;
-        min-height: 175px;
-        padding: 13px;
-        .sp-thumb-logo-logo {
-          height: 90px;
-          img {
-            margin-left: auto;
-            margin-right: auto;
-            max-height: 90px;
-            max-width: 100%;
-          }
-        }
-      }
-    }
 
-    .h2-lista {
-      padding-left: 15px;
-      margin-bottom: 2em;
-    }
-    .li-item {
-      &:hover {
-        border-color: transparent;
-        + .li-item {
-          border-top: 2px solid transparent;
-        }
-      }
-      .li-a-item {
-        padding-left: 15px;
-        &:before {
-          border-radius: 3px;
-        }
-        &:hover {
 
-          &:before {
-            border-radius: 3px;
-            background-color: rgba(255,255,255,.5);
-          }
-        }
-        p {
-
-          &.nombre {
-          }
-          &.descrip {
-          }
-        }
-      }
-    }
-  }
-}
 
 @media (min-width: @screen-md-min) {
-  .tab-panel {
-    .row {
-      .sp-thumb-logo {
-        width: 200px;
-        min-height: 230px;
-        padding: 15px;
-        .sp-thumb-logo-logo {
-          height: 140px;
-          img {
-            max-height: 140px;
-          }
-        }
-      }
-    }
-  }
-}
+
+
 
 
 //
