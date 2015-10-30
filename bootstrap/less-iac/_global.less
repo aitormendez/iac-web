@@ -1,0 +1,309 @@
+//
+// GLOBAL
+// --------------------------------------------------
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+#fondo {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  //#gradient > .radial(#E9E9E9; #C3C3C3);
+  z-index: -1000;
+}
+
+.fondo-iac {
+  background-color: @color-iac;
+}
+
+.fondo-socios {
+  background-color: @color-socios;
+}
+
+.fondo-noticias {
+  background-color: @color-noticias;
+}
+
+.fondo-observatorio {
+  background-color: @color-observatorio;
+}
+
+
+
+.btn {
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+}
+
+.btn-default {
+  text-shadow: none;
+  background-color: @btn-default-bg;
+  color: @btn-default-color;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+*:focus, *:hover {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.navbar {
+  z-index: 300;
+}
+.navbar,
+.dropdown-menu,
+a.dropdown-toggle.open,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus
+  {
+//eliminar gradiente se repite para quitar vendor prefixes
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  filter: none;
+  border-radius: 0 !important;
+}
+.dropdown-menu,
+.navbar-collapse {
+  background-color: white;
+  border: none;
+}
+
+.boton {
+  background-image: none;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+}
+
+
+.boton-cuadrado {
+  background: white;
+  width: 32px;
+  border-radius: @border-radius-small;
+  text-align: center;
+  .icono {
+    text-align: center;
+    color: @gray;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight:normal;
+  }
+  &:hover {
+    .icono {
+      color: white;
+    }
+    background: @icon-hover-color;
+  }
+  &:active {
+    padding: 0;
+    background-color: @gray-darker;
+  }
+}
+
+.boton-rojo {
+  &:hover {
+    background-color: @brand-danger;
+  }
+  &:active {
+    background-color: @gray-darker;
+  }
+}
+
+// CHECKBOX------
+
+label.check {
+  display: block;
+  cursor: pointer;
+  color: white;
+  input {
+    position: absolute;
+    left: -9999px;
+  }
+  .icono-check {
+    height: 20px;
+    width: 20px;
+    background-color:  #A2A2A2;
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  &.c_on {
+    .icono-check {
+      background-color:  #009400;
+    }
+    color: @gray-dark;
+  }
+  &:hover {
+      color: @gray-dark;
+  }
+}
+
+//PAGINACIÓN
+.col-centro-b {
+  .paginacion {
+    background-color: @color-iac;
+    width: 100%;
+    text-align: center;
+    padding: 15px 50px 5px 50px;
+    .pagination {
+      border-radius: 0;
+      margin: 0;
+    }
+  }
+
+}
+.pagination {
+  font-size: 16px;
+  li {
+    &.active, &:focus {
+      background-color: @gray-dark !important;
+      color: white;
+      padding: 6px 12px;
+      float: left;
+      border-radius: @border-radius-base;
+      margin-right: 10px;
+      &:hover {
+        background-color: @gray-dark !important;
+      }
+
+    }
+    a {
+      color: @gray-dark;
+      border: none;
+      margin-right: 10px;
+      border-radius: @border-radius-base;
+      &:hover {
+        background-color: @icon-hover-color;
+        color: white;
+      }
+    }
+    &:first-child, &:last-child {
+      a {
+        font-size: 20px;
+        background-color: transparent;
+        margin-right: 0;
+        &:hover {
+          color: @icon-hover-color;
+        }
+      }
+    }
+    &:nth-last-child(2) a {
+      margin-right: 0;
+    }
+    &.disabled {
+      display: none;
+    }
+  }
+}
+
+//reset para que no se desplace el botón al apretar
+button {
+  padding: 0;
+    &:focus {
+    padding: 0;
+  }
+}
+
+//Icono descarga documentos
+
+
+.icono-enlace {
+  display: block;
+  color: white;
+  background-color: @gray-dark;
+  padding: 15px;
+  h3 {
+    color: @gray-light;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 0;
+  }
+  span {
+    font-size: 48px;
+  }
+  &:hover, &:focus {
+    color: #FF9800;
+    background-color: @gray-darker;
+    h3 {
+      color: #FF9800;
+    }
+  }
+}
+
+
+@media (min-width: @screen-sm-min) {
+  .icono-enlace {
+    background-color: transparent;
+    padding: 0 15px 0 0;
+    h3 {
+      color: @gray-light-med;
+    }
+    &:hover, &:focus {
+      color: #FF9800;
+      background-color: transparent;
+      h3 {
+        color: black;
+      }
+    }
+  }
+}
+
+//
+// FORMS ----------------------------------------
+
+
+
+input, .form-control, textarea {
+  border: none;
+  box-shadow: none;
+  color: @gray-lighter;
+  &:focus {
+    background-color: @gray-dark;
+    color: white;
+    box-shadow: none;
+  }
+}
+
+
+// cambio de color placeholder en focus-----------
+
+input:focus::-webkit-input-placeholder {
+    color: white;
+}
+/* Firefox < 19 */
+input:focus:-moz-placeholder {
+    color: white;
+}
+/* Firefox > 19 */
+input:focus::-moz-placeholder {
+    color: white;
+}
+/* Internet Explorer 10 */
+input:focus:-ms-input-placeholder {
+    color: white;
+}

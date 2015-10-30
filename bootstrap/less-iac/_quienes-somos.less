@@ -1,0 +1,37 @@
+//
+// LISTADO SOCIOS QUIENES SOMOS
+// --------------------------------------------------
+.margen-izq-50 {
+  padding-left: 50px;
+}
+
+.lista-enlaces { // listado de socios
+  padding: 0;
+  li {
+    list-style-type: none;
+    a {
+      display: inline-block;
+      font-size: 18px;
+      color: @gray;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &.nombre {
+        width: 90%;
+        padding-left: 50px;
+        .cargo {
+          font-weight: bold;
+        }
+      }
+      &.contacto {
+        text-align: center;
+        width: 10%;
+        font-size: 16px;
+        float: right;
+      }
+      &:hover {
+        background-color: @gray-light;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+//
+// NAVEGACIÓN
+// --------------------------------------------------
+
+
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:active {
+  color: black;
+}
+
+.navbar-principal {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: white;
+  .navbar-toggle {
+    border: none;
+    border-radius: 0;
+    &:hover {
+      background-color: transparent;
+      .icon-bar {
+        background-color: @gray-dark;
+      }
+    }
+    .icon-bar {
+      display: block;
+      height: 4px;
+      width: 30px;
+    }
+  }
+  .navbar-brand {
+    position: relative;
+    margin: 0;
+    margin-left: 20px;
+    top: 0px;
+    padding: 10 0px;
+    height: 90px;
+    &:hover {
+      .mombre-iac, .icon-logo-60 {
+        color: black;
+      }
+    }
+    .icon-logo-60 {
+      font-size: 60px;
+      color: @gray;
+    }
+    .mombre-iac {
+      display: inline-block;
+      font-family: 'Homenaje', sans-serif;
+      font-size: 1em;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-shadow: none;
+      max-width: 60px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 20px;
+      color: @gray;
+    }
+  }
+  .navbar-collapse {
+    font-size: 1.3em;
+    li {
+      a {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+
+@media (min-width: @screen-sm-min) {
+  .navbar-principal {
+    padding-top: 30px;
+    margin-right: 50px;
+    margin-bottom: 0;
+    .navbar-brand {
+      top: -10px;
+      padding: 0;
+      height: 50px;
+      .icon-logo-60 {
+      }
+      .mombre-iac {
+      }
+    }
+    .navbar-collapse {
+      background-color: transparent;
+      .nav {
+          float: right;
+          .menu-menu {
+            &::before {
+              .luto
+            }
+          }
+        > li {
+          margin-right: 10px;
+          margin-left: 10px;
+          &.menu-iac {
+            margin-right: 20px;
+          }
+          &.menu-soci {
+            max-width: 60px;
+            margin-right: 100px;
+          }
+          &.menu-docu {
+            max-width: 90px;
+          }
+          &.dropdown.open {
+            position: static;
+            .dropdown-menu {
+              padding-top: 2em;
+              padding-bottom: 2em;
+              display:table;
+              width: 100%;
+              text-align: left;
+              left:0;
+              right:0;
+              li {
+                padding: .2em 0;
+                &:first-child::before {
+                  .luto
+                }
+                a {
+                  color: @submenu-color;
+                  &:hover {
+                    color: black;
+                  }
+                }
+              }
+            }
+          }
+          a {
+            padding: 0;
+
+            color: @menu-color;
+            font-size: 12px;
+            line-height: 1em;
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .navbar-principal {
+    .navbar-brand {
+      .icon-logo-60 {
+      }
+    }
+    .navbar-collapse {
+      .nav {
+        > li {
+          margin-right: 13px;
+          margin-left: 13px;
+          &.menu-iac {
+            margin-right: 30px;
+          }
+          &.menu-soci {
+            max-width: 55px;
+          }
+          &.menu-docu {
+            max-width: 120px;
+          }
+          &.dropdown.open {
+            position: static;
+            .dropdown-menu {
+              padding-top: 2em;
+
+              li {
+                &:first-child::before {
+                  .luto
+                }
+                a {
+                  color: @submenu-color;
+                  &:hover {
+                    color: black;
+                  }
+                }
+              }
+            }
+          }
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

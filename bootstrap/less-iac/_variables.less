@@ -1,0 +1,40 @@
+//
+// VARIABLES
+// --------------------------------------------------
+
+@menu-color:                  @gray;
+@submenu-color:               @gray-light;
+@btn-default-color:           white;
+@btn-default-bg:              @gray-dark;
+@color-enlace:                #B0ADDA;
+@color-enlace-dark:           darken(@color-enlace, 10%);
+@icon-hover-color:            @color-enlace;
+@color-iac:                   #EAEAEA;
+@color-socios:                @color-iac;
+@color-noticias:              @color-iac;
+@color-editando:              #dfc956;
+@color-observatorio:          @color-iac;
+@color-claro:                 #d7faf4;
+
+@font-size-h1:            24px;
+@font-size-h2:            24px;
+@font-size-h3:            20px;
+
+@altura-sm: 300px;
+@altura-md: 400px;
+@altura-lg: 500px;
+
+//
+// MIXINS
+// --------------------------------------------------
+
+.luto(@top:-10px){
+  display: block;
+    content: "";
+    background-color: @menu-color;
+    width: 10px;
+    height: 5px;
+    border-radius: 2px;
+    position: relative;
+    top: @top;
+  }

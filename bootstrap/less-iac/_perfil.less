@@ -1,0 +1,278 @@
+//
+// PERFIL
+// --------------------------------------------------
+
+.perfil-cont {
+  margin: 0;
+  padding-bottom: 15px;
+
+  .boton-cuadrado { //hack genérico para solucionar X grande
+    vertical-align: top;
+    .icon-no-16 {
+      font-size: 16px;
+    }
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .row-declaracion {
+    padding-top: 15px;
+    .col-izquierda {
+      h1 {
+        max-width: 70%;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+      .boton-cuadrado {
+        display: inline-block;
+        margin-left: 15px;
+      }
+      .icono-perfil {
+        font-size: 64px;
+        color: white;
+      }
+    }
+    .col-centro {
+      float: left;
+      margin-left: 0;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .row-enlace {
+    margin: 5px 0px;
+    background-color: white;
+    font-size: 14px;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: @gray-light;
+      .enlace {
+        padding: 0px 15px;
+        text-transform: uppercase;
+      }
+      &:hover {
+        background-color: @gray-dark;
+        color: white;
+      }
+      .botonera {
+        float: right;
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .row.editando {
+    background-color: @color-editando;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    .col-izquierda {
+      h1 {
+        color: white;
+        margin-bottom: 15px;
+      }
+      .icon-perfil-32 {
+        font-size: 64px;
+        color: white;
+      }
+    }
+    .col-centro {
+      margin-left: 0;
+      p {
+        color: white;
+        font-size: 16px;
+      }
+      form {
+        margin-bottom: 20px;
+        label {
+          color: white;
+        }
+        .btn-default {
+          background-color: @gray-dark;
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+
+    }
+  }
+
+  .row-texto {
+    margin: 5px 0px;
+    background-color: white;
+    padding-top: 15px;
+    .col-centro {
+      float: left;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .row-imagen {
+    margin: 5px 0px;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .col-izquierda {
+      h2 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    .col-centro {
+      margin-left: 0;
+      float: left;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .row-enlace a {
+      .enlace {
+        display: inline-block;
+        margin-left: 30%;
+        width: 50%;
+      }
+      .botonera {
+        margin-right: 65px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    .row-enlace a .enlace {
+      width: 45%;
+      margin-left: 25%;
+    }
+  }
+}
+
+//
+// PERFIL EDIT
+// --------------------------------------------------
+// .row-edit      -es la caja de añadir contenido que aparece abajo del todo en modo pre-edicion.
+// .row-editando  -es la fila amarilla que se añade arriba del todo en modo pre-edición (igual que .row-declaracion, etc)
+// .row.editando  -es para un item en modo edición
+// .pre-edicion   -es para diferenciar un item que aparece con los botones de pre-edicion a la derecha (solo los que items que lo necesitan, que no son todos)
+
+h2.editando {
+  color: white;
+  font-size: 24px;
+  .icon-edit-24 {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+}
+
+.row-editando {
+  background-color: @color-editando;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  color: white;
+  .icono-perfil {
+    font-size: 64px;
+  }
+  .col-izquierda {
+    h1 {
+      margin-bottom: 15px;
+      color: white;
+    }
+  }
+  .col-centro {
+    margin-left: 0;
+    p {
+      color: white;
+    }
+  }
+}
+
+.row-edit{
+  color: white;
+  background-color: @color-editando;
+  h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .nav-pills {
+    margin-bottom: 20px;
+    li {
+      a {
+        border-radius: @border-radius-small;
+        background-color: @gray-dark;
+        color: white;
+        &:hover {
+          background-color: black;
+        }
+      }
+      &.active {
+        a {
+          background-color: white;
+          color: @gray-dark;
+        }
+      }
+    }
+  }
+  form {
+    margin-bottom: 20px;
+    border: none;
+    label {
+      color: white;
+    }
+    #titulo-texto {
+      margin-bottom: 15px;
+    }
+    .btn-default {
+      background-color: @gray-dark;
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
+
+.pre-edicion {
+  .col-centro {
+    width: 70%;
+  }
+  .col-derecha {
+    width: auto;
+    float: right;
+    margin-right: 50px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .pre-edicion {
+    .col-centro {
+      width: 50%;
+    }
+    .col-derecha {
+      margin-right: 65px;
+    }
+  }
+}
+
+
+#subir-imagen {
+  margin-bottom: 15px;
+}
+
+.cke {
+  margin-bottom: 15px !important;
+}

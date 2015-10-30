@@ -1,0 +1,229 @@
+//
+// OVERLAY LATERAL
+// --------------------------------------------------
+
+
+//caja de botones----
+
+
+.lateral {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 320;
+  text-align: center;
+  background-color: @gray-lighter;
+  .boton-lateral {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    -moz-user-select: none;
+    padding: 13px;
+    .luto-lateral {
+      display: none;
+    }
+    #txt-idioma {
+      font-family: 'Homenaje', sans-serif;
+      font-size: 1.4em;
+      color: @menu-color;
+      position: relative;
+      top: -3px;
+    }
+    .icn-lateral {
+      font-size: 24px;
+      color: @menu-color;
+    }
+    &:hover {
+      .luto-lateral {
+        background-color: black;
+      }
+      #txt-idioma {
+        color: black;
+      }
+      .icn-lateral {
+        font-size: 24px;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .lateral {
+    right: 0;
+    height: 100%;
+    width: 50px;
+    padding-top: 30px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: white;
+    .boton-lateral {
+      display: block;
+      margin-bottom: 20px;
+      height: 50px;
+      width: 32px;
+      padding: 0;
+      .luto-lateral {
+        display: block;
+        .luto
+      }
+    }
+  }
+}
+
+.overlay-slidedown {
+  margin-top: 50px;
+  .marco {
+    display: block;
+    padding: 20px;
+    padding-top: 200px;
+    height: 100%;
+    border: 10px solid white;
+    text-align: center;
+    .overlay-close {
+      position: absolute;
+      top: 80px;
+      right: 50px;
+      font-size: 48px;
+      border: none;
+      background-color: transparent;
+      color: white;
+      &:hover {
+        color: @gray-dark;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .overlay-slidedown {
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    .marco {
+      padding: 50px;
+      padding-top: 200px;
+      .overlay-close {
+        top: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .overlay-slidedown {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-right: 50px;
+    .marco {
+      padding: 75px;
+      padding-top: 200px;
+    }
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .overlay-slidedown {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 50px;
+    .marco {
+      padding: 100px;
+      padding-top: 200px;
+    }
+  }
+}
+
+//
+// OVERLAY FORM GENERICO
+// --------------------------------------------------
+
+.marco {
+  .form-group {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: .5em;
+    float: none;
+    }
+  input, textarea {
+    font-size: 20px;
+    margin-bottom: 2em;
+    padding: 1em;
+    height: 3.3em;
+  }
+
+  label, legend {
+    display: none;
+  }
+  textarea {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 4px;
+  }
+}
+
+//
+// OVERLAY1 (BUSQUEDAS)
+// --------------------------------------------------
+
+.overlay1 {
+  background-color: @color-iac;
+    input {
+    text-align: center;
+  }
+}
+
+//
+// OVERLAY2 (SOCIALMEDIA)
+// --------------------------------------------------
+
+.overlay2 {
+  background-color: @color-iac;
+  .social-cont {
+    .icon-social {
+      font-size: 48px;
+      cursor: pointer;
+      &:hover {
+        color: @gray-darker;
+      }
+    }
+    p {
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: .01em;
+      line-height: 1em;
+      color: white;
+      margin: 2em;
+    }
+
+  }
+}
+
+
+//
+// OVERLAY3 (AREA PRIVADA)
+// --------------------------------------------------
+
+.overlay3 {
+  background-color: @color-socios;
+  .area-privada {
+      input {
+    text-align: center;
+  }
+  }
+}
+
+
+//
+// OVERLAY4 (CONTACTO)
+// --------------------------------------------------
+
+.overlay4 {
+  background-color: @color-iac;
+  label, legend {
+    display: none;
+  }
+}

@@ -1,0 +1,104 @@
+//
+// TIPOGRAFÍA
+// --------------------------------------------------
+
+
+h1 {
+  font-size: @font-size-h1;
+  font-weight: bold;
+  color: @gray;
+  margin-top: 0;
+}
+
+
+h2 {
+  font-size: @font-size-h2;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+h3 {
+  font-size: @font-size-h3;
+}
+
+
+&.ariadna {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: .2em .4em;
+  background-color: @gray;
+  color: @gray-lighter;
+  border-radius: @border-radius-small;
+
+  @media (min-width: @screen-sm-min) {
+    &.ariadna {
+      margin-top: 0;
+    }
+  }
+}
+
+ul, ol {
+  li {
+
+  }
+}
+
+p {
+  font-size: 16px;
+  a {
+    color: @color-enlace-dark;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.entradilla {
+  p{
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    background-color: white;
+    height: 5px;
+    border-radius: @border-radius-base;
+    margin: 15px 0 25px 0;
+  }
+}
+
+blockquote {
+  border: none;
+  font-style: italic;
+  color: @link-color;
+}
+
+.metadato {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: @gray;
+}
+
+.col-centro {
+  h1 {
+    margin-bottom: 2em;
+  }
+}
+
+.pie-de-foto {
+  font-size: 12px;
+  color: @gray-light;
+  background-color: white;
+  padding: 3px 5px;
+  margin: 5px 0 1em 0;
+  border-radius: @border-radius-small;
+}
+
+.cont-imagen {
+  margin-bottom: 1em;
+  img {
+    border-radius: @border-radius-small;
+  }
+}
