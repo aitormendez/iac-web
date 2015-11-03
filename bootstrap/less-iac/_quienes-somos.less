@@ -1,36 +1,43 @@
 //
 // LISTADO SOCIOS QUIENES SOMOS
 // --------------------------------------------------
-.margen-izq-50 {
+.epigrafe-listado {
   padding-left: 50px;
+  margin-bottom: 14px;
 }
 
 .lista-enlaces { // listado de socios
   padding: 0;
-  li {
+  .h-card {
+    display: block;
     list-style-type: none;
+    margin-bottom: 5px;
+    border-bottom: 1px solid @gray-lighter;
+    padding: 0 50px 5px 50px;
+    &:last-child {
+      border-bottom: none;
+    }
+    p {
+      margin: 0;
+      &.p-job-title {
+        display: inline;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      &.p-name {
+        display: inline;
+        font-size: 18px;
+      }
+    }
     a {
-      display: inline-block;
-      font-size: 18px;
-      color: @gray;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      &.nombre {
-        width: 90%;
-        padding-left: 50px;
-        .cargo {
-          font-weight: bold;
-        }
+      padding: 0 10px 0 6px;
+      border-right: 1px solid @gray-light;
+      &:first-child {
+        padding-left: 0;
       }
-      &.contacto {
-        text-align: center;
-        width: 10%;
-        font-size: 16px;
-        float: right;
-      }
-      &:hover {
-        background-color: @gray-light;
-        color: white;
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
       }
     }
   }
