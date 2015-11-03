@@ -30,11 +30,18 @@ h3 {
   background-color: @gray;
   color: @gray-lighter;
   border-radius: @border-radius-small;
+  a {
+    color: white;
+  }
+  &:hover {
+    background-color: @color-enlace;
+    a {
+      display: block;
+    }
+  }
 
   @media (min-width: @screen-sm-min) {
-    &.ariadna {
       margin-top: 0;
-    }
   }
 }
 
