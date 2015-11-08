@@ -300,7 +300,7 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         expand: true,
-        src: 'fonts/*',
+        src: 'fonts/**/*',
         dest: 'dist/'
       },
       docs: {
@@ -468,15 +468,38 @@ module.exports = function (grunt) {
     },
 
     webfont: {
-    iconos: {
-        src: 'iconos/*.svg',
-        dest: 'iconos-build',
-        options: {
-            fontFilename: 'iac'
+        iconos: {
+            src: 'iconos/*.svg',
+            dest: 'iconos-build',
+            options: {
+                fontFilename: 'iac'
+            }
         }
-    }
-}
+    },
 
+    embedfont: {
+      default: {
+          options:{
+              fontPath: 'fonts',
+              stylePath: 'less-iac',
+              relPath: '../fonts',
+              output: 'less',
+              engine: 'fontforge'
+          },
+          fonts: {
+              Asap: {
+                  normal: {
+                      '400': 'fuentes/Asap-Regular.ttf',
+                      '700': 'fuentes/Asap-Bold.ttf'
+                  },
+                  italic: {
+                      '400': 'fuentes/Asap-Italic.ttf',
+                      '700': 'fuentes/Asap-BoldItalic.ttf'
+                  }
+              },
+          }
+      },
+    },
   });
 
 
@@ -581,5 +604,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-webfont');
   grunt.registerTask('webfonts', ['webfont:iconos']);
+
+  grunt.loadNpmTasks('grunt-embedfont');
 
 };

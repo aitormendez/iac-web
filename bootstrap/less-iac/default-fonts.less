@@ -1,0 +1,30 @@
+
+
+.EmbedAsap( @path, @weight: normal, @style: normal ){
+	@font-face {
+		@f: ~"@{path}.";
+		@name: Asap;
+		font-family: 'Asap';
+		src: url(~"@{f}eot");
+		src: url(~"@{f}eot?#iefix") format('embedded-opentype'),
+			 url(~"@{f}woff") format('woff'),
+			 url(~"@{f}ttf") format('truetype'),
+			 url(~"@{f}svg#@{name}") format('svg');
+		font-weight: @weight;
+		font-style: @style;
+	}
+}
+
+.EmbedAsap( "../fonts/Asap/Asap-400", 400, normal );
+.EmbedAsap( "../fonts/Asap/Asap-700", 700, normal );
+.EmbedAsap( "../fonts/Asap/Asap-400-Italic", 400, italic );
+.EmbedAsap( "../fonts/Asap/Asap-700-Italic", 700, italic );
+
+
+.Asap( @weight: normal, @style: normal ) {
+	font-family: "Asap";
+	font-weight: @weight;
+	font-style: @style;
+}
+
+
