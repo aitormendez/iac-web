@@ -188,7 +188,7 @@ module.exports = function (grunt) {
           sourceMapURL: 'pdf.css.map',
           sourceMapFilename: 'dist/css/pdf.css.map'
         },
-        src: ['less/pdf.less', 'less/icon-font.less'],
+        src: ['less/pdf.less', 'less/icon-font.less', 'less-iac/default-fonts.less'],
         dest: 'dist/css/pdf.css'
       }
     },
