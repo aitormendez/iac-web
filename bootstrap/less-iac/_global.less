@@ -148,7 +148,7 @@ a.dropdown-toggle.open,
 label.check {
   display: block;
   cursor: pointer;
-  color: white;
+  color: @gray-light;
   input {
     position: absolute;
     left: -9999px;
@@ -160,12 +160,24 @@ label.check {
     float: left;
     margin-right: 10px;
     border-radius: 10px;
+    .punto {
+      position: relative;
+      top: 4px;
+      height: 12px;
+      width: 12px;
+      margin: auto;
+      background-color: @gray-lighter;
+      border-radius: 6px;
+    }
   }
   &.c_on {
     .icono-check {
-      background-color:  #009400;
+      background-color:  @color-enlace;
+      .punto {
+        background-color: #d2e493;
+      }
     }
-    color: @gray-dark;
+    color: @gray;
   }
   &:hover {
       color: @gray-dark;

@@ -2,86 +2,34 @@
 // BIBLIOTECA DE DOCUMENTOS
 // --------------------------------------------------
 
-fielset.categorias {
-  margin-bottom: 50px;
-}
 
 .docs {
-  font-size: 1em;
+  list-style-type: none;
+  padding-left: 0;
   .doc {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    .metadatos {
-      width: 100%;
-      display: block;
-      h2 {
-        color: @gray;
-        font-size: 1.3em;
-        font-weight: bold;
-      }
-      ul {
+    margin-bottom: 50px;
+    h1, .descripcion {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    .adjuntos {
+      padding: 15px 50px;
+      background-color: @gray;
+      a {
         display: inline-block;
-        li {
-          color: @gray-light;
-          text-transform: uppercase;
-          border-top: 1px solid @gray-light;
-          &.metadato {
-            font-size: .7em;
-          }
-          &.enlaces {
-            padding-top: 10px;
-            font-size: 12px;
-            margin-bottom: .5em;
-            a {
-              display: inline-block;
-              margin-right: 10px;
-              div {
-              }
-            }
-          }
+        color: white;
+        font-size: 24px;
+        line-height: 24px;
+        &:hover {
+          color: @color-enlace;
         }
       }
     }
-    .descripcion {
-      display: inline-block;
-      vertical-align: top;
-      width: 100%;
-      font-size: 0.8em;
-    }
   }
+
 }
 
 
 @media (min-width: @screen-sm-min) {
-  .docs {
-    .doc {
-      .metadatos {
-        width: 50%;
-        display: inline-block;
-        vertical-align: top;
-        padding-right: 15px;
-        h2 {
-          color: @gray;
-        }
-        ul {
-          display: inline-block;
-          li {
-            &.enlaces {
-              padding-top: 10px;
-              a {
-                div {
-                  display: block;
-                }
-              }
-            }
-          }
-        }
-      }
-      .descripcion {
-        display: inline-block;
-        vertical-align: top;
-        width: 49%;
-      }
-    }
-  }
+
 }
