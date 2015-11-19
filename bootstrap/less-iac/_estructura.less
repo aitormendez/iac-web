@@ -54,7 +54,7 @@
   padding-left: 0;
 }
 
-.col-izquierda, .col-izquierda-b {
+.col-izquierda {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 50px;
@@ -117,11 +117,24 @@
 //(la llamo "b" a esta estructura) se usa en docs individual,
 //noticias individual, etc.
 
+.col-izquierda-b{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+  background-color: @color-claro;
+}
+
+.col-centro-b {
+  padding-top: 35px;
+  background-color: white;
+}
+
+
+
 @media (min-width: @screen-sm-min) {
   .col-izquierda-b {
     padding: 15px 0;
     width: 100%;
-    background-color: @color-claro;
     > * {
       max-width: @ancho-col-izquierda-sm;
       padding-left: 15px;
@@ -133,7 +146,6 @@
   }
   .col-centro-b {
     position: absolute;
-    background-color: white;
     margin-top: 40px;
     margin-bottom: 100px;
     padding: 0 0 50px 0;
