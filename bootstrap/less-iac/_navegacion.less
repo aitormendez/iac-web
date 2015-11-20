@@ -190,3 +190,66 @@
     }
   }
 }
+
+
+//
+// NAVEGACIÓN LATERAL
+// --------------------------------------------------
+
+
+.navbar-lateral {
+  .navbar-header {
+  text-align: right;
+  .epigrafe {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    line-height: 53px;
+    color: @gray-light;
+  }
+  .icon-bar {
+    height: 4px;
+    width: 30px;
+    background-color: @gray-light;
+  }
+  .navbar-toggle {
+    border: none;
+    &:hover {
+      background-color: transparent;
+      .icon-bar {
+        background-color: @gray-dark;
+      }
+    }
+  }
+  }
+  #navbar-lateral {
+    background-color: transparent;
+    li {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+
+
+@media (min-width: @screen-sm-min) {
+  .navbar-lateral {
+    position: static;
+    .epigrafe {
+      display: none;
+    }
+    #navbar-lateral {
+      ul {
+        float: none;
+        li {
+          float: none;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+}
