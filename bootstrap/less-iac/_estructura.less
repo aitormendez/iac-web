@@ -9,12 +9,13 @@
     padding: 0;
     li {
       list-style-type: none;
+      margin-bottom: 10px;
+      border-radius: @border-radius-base;
       &.activo {
         display: inline-block;
         background-color: @gray;
         color: white;
         padding: 5px 10px;
-        border-radius: @border-radius-base;
       }
       &.active {
         a, a:focus {
@@ -22,14 +23,14 @@
         }
       }
       a {
-        background-color: white;
+        display: inline-block;
         padding: 5px 10px;
-        }
+        background-color: white;
+        border-radius: @border-radius-base;
         &:hover {
-          a {
             background-color: @color-enlace !important;
             color: white;
-          }
+        }
       }
     }
   }
@@ -38,7 +39,6 @@
 @media (min-width: @screen-sm-min) {
   .menu-lateral {
     li {
-      margin-bottom: 10px;
       a {
         display: inline-block;
         border-radius: @border-radius-base;
