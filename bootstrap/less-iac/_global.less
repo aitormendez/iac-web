@@ -330,5 +330,31 @@ input:focus:-ms-input-placeholder {
 }
 
 //
-// Navegación columna lateral colapsable
+// ariadna
 //------------------------------
+&.ariadna {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 !important;
+  background-color: @gray;
+  color: @gray-lighter;
+  border-radius: @border-radius-small;
+  span {
+    display: block;
+    padding: .2em .4em;
+  }
+  a {
+    color: white;
+    display: block;
+    padding: .2em .4em;
+    &:hover {
+      background-color: @color-enlace;
+    }
+  }
+
+
+  @media (min-width: @screen-sm-min) {
+      margin-top: 0;
+  }
+}
