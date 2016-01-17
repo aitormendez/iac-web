@@ -302,7 +302,8 @@ button {
 input, .form-control, textarea {
   border: none;
   box-shadow: none;
-  color: @gray-lighter;
+  color: @gray-light;
+  margin-bottom: 15px;
   &:focus {
     background-color: @gray-dark;
     color: white;
@@ -310,6 +311,13 @@ input, .form-control, textarea {
   }
 }
 
+.formulario-allo {
+  padding: 15px;
+  background-color: @color-editando;
+  legend {
+    border: none;
+  }
+}
 
 // cambio de color placeholder en focus-----------
 
@@ -409,4 +417,12 @@ body.mantenimiento {
         color: @gray-light;
       }
   }
+}
+
+//
+// como-unirse
+//------------------------------
+
+.como-unirse {
+  padding: 0 15px;
 }
