@@ -360,32 +360,34 @@ input:focus:-ms-input-placeholder {
 //
 // ariadna
 //------------------------------
-&.ariadna {
-  display: inline-block;
-  font-size: 14px;
+.ariadna-h3, .ariadna-h4 {
+  display: block;
   text-transform: uppercase;
-  padding: 0 !important;
-  background-color: @gray;
-  color: @gray-lighter;
-  border-radius: @border-radius-small;
+  margin: 5px 0 !important;
+  letter-spacing: 1px;
   span {
-    display: block;
-    padding: .2em .4em;
-  }
-  a {
+    display: inline-block;
+    background-color: @gray;
     color: white;
-    display: block;
-    padding: .2em .4em;
     border-radius: @border-radius-small;
-    &:hover {
-      background-color: @color-enlace;
-    }
+    padding: .2em .4em;
+  }
+  a{
+    display: inline-block;
+    color: white;
+    background-color: @color-enlace;
+    border-radius: @border-radius-small;
+    padding: .2em .4em;
   }
 
+}
 
-  @media (min-width: @screen-sm-min) {
-      margin-top: 0;
-  }
+.ariadna-h3 {
+  font-size: 10px;
+}
+
+.ariadna-h4 {
+  font-size: 14px !important;
 }
 
 
