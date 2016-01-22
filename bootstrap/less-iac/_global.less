@@ -56,6 +56,9 @@ body, html {
   background-image: none;
   box-shadow: none;
   border: none;
+  &:focus {
+    padding: 6px 12px;
+  }
 }
 
 .btn-default {
@@ -64,6 +67,9 @@ body, html {
   color: @btn-default-color;
   &:hover {
     background-color: black;
+    color: white;
+  }
+  &:focus {
     color: white;
   }
 }
@@ -372,12 +378,15 @@ input:focus:-ms-input-placeholder {
     border-radius: @border-radius-small;
     padding: .2em .4em;
   }
-  a{
+  a {
     display: inline-block;
     color: white;
     background-color: @color-enlace;
     border-radius: @border-radius-small;
     padding: .2em .4em;
+    &:hover {
+      background-color: @gray-dark;
+    }
   }
 
 }
