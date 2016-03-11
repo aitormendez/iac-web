@@ -7,3 +7,4 @@ _err.*
 ckeditor/**
 jquery/**
 bootstrap/dist/**
+bootstrap/node_modules
