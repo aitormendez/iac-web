@@ -134,6 +134,7 @@
   .col-izquierda-b {
     padding: 15px 0;
     width: 100%;
+    min-height: 200px;
     > * {
       max-width: @ancho-col-izquierda-sm;
       padding-left: 15px;
@@ -161,6 +162,11 @@
 
 @media (min-width: @screen-lg-min) {
   .col-izquierda-b {
+    > * {
+      max-width: @ancho-col-izquierda-lg;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
   }
   .col-centro-b {
